@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="row">
+            <div class="col-12" style="text-align :center">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4" style="text-align :center">
+                <h1>
+                    Square
+                </h1>
+
+                <img src="file:///Users/mineh/Documents/images.png" alt="square" hspace="40">
+                <div class="input-group input-group-lg" style="margin-top : 20px">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Side</span>
+                    </div>
+                    <input id="sideInputId" class="form-control" type="number" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg">
+
+                    <button type="button" style="margin-top:20px" onclick="calculateSquareArea()"
+                        class="btn btn-primary">Calculate Area</button>
+
+                    <p id="squareResultTextId">result here!!</p>
+                </div>
+            </div>
+            <div class="col-4" style="text-align :center">
+                <h1>
+                    Rectangle
+                </h1>
+                <img src="file:///Users/mineh/Documents/482759.png" alt="rectangle" hspace="40">
+                <div class="input-group input-group-lg" style="margin-top : 20px">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Width</span>
+                        <input id="sideInputId" class="form-control" type="number" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg">
+
+                        <span class="input-group-text" id="inputGroup-sizing-lg">Height</span>
+                        <input id="sideInputId" class="form-control" type="number" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg">
+
+                    </div>
+
+                   
+                    <button type="button" style="margin-top:20px" onclick="calculateRectangleArea()"
+                        class="btn btn-primary">Calculate Area</button>
+
+                    <button type="button" style="margin-top:20px" onclick="calculateRectanglePerimeter()"
+                        class="btn btn-primary" style="margin-top:20px" x>Calculate Perimeter</button>
+
+
+                    <p id="RectangleResultTextId">result here!!</p>
+                </div>
+            </div>
+            <div class="col-4" style="text-align :center">
+                Triangle
+                </h1>
+                <img src="file:///Users/mineh/Documents/5625_1_1.gif" alt="triangle">
+                <input type="number" number="a number" value="width">
+                <input type="number" number="a number" value="width">
+            </div>
+        </div>
+    </div>
+    <script>
+        function calculateSquareArea() {
+            var side = document.getElementById('sideInputId').value;
+            var area = side * side;
+            var pElement = document.getElementById('squareResultTextId');
+            pElement.innerHTML = area;
+
+            function calculateRectangleArea() {
+                var width = document.getElementById('sideInputId').value;
+                var area = width * height;
+                var pElement = document.getElemntById('RectangleResultTextId');
+                pElement.innerHTML = area;
+            }
+        }
+    </script>
+</body>
+
+</html>
